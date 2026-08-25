@@ -1,0 +1,9 @@
+{
+	"name": "DebugEngine",
+	"description": "",
+	"version": "0.0.1",
+	"homepage": "https://github.com/arbsis/DebugEngine4Delphi",
+	"mainsrc": "./Source",
+	"projects": [],
+	"dependencies": {}
+}
