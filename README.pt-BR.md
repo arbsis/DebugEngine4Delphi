@@ -432,6 +432,4 @@ Evento pós-build típico: `DD -c -p "$(OUTPUTDIR)$(OUTPUTNAME).map"` e depois `
 
 ## Contribuindo
 
-Issues e pull requests são bem-vindos no repositório original:
-https://github.com/MahdiSafsafi/DebugEngine — veja a [Wiki](https://github.com/MahdiSafsafi/DebugEngine/wiki)
-para os artigos originais sobre stack tracing e SMAP.
+Issues e pull requests são bem-vindos.
