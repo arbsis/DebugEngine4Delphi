@@ -16,7 +16,7 @@ program DebugEngineLinuxSimple;
 uses
   System.SysUtils,
   System.Classes,
-  DebugEngine.Linux.HookException in '..\..\..\Source\Linux\DebugEngine.Linux.HookException.pas';
+  DebugEngine.Linux.HookException in '..\..\..\src\Linux\DebugEngine.Linux.HookException.pas';
 
 { Some call depth so that the stack trace has something to show. }
 

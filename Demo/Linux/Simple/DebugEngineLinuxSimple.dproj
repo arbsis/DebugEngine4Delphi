@@ -34,7 +34,7 @@
         <Base>true</Base>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base)'!=''">
-        <DCC_UnitSearchPath>..\..\..\Source\Linux;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_UnitSearchPath>..\..\..\src\Linux;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <SanitizedProjectName>DebugEngineLinuxSimple</SanitizedProjectName>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Android)'!=''">
@@ -57,7 +57,7 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="..\..\..\Source\Linux\DebugEngine.Linux.HookException.pas"/>
+        <DCCReference Include="..\..\..\src\Linux\DebugEngine.Linux.HookException.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

@@ -88,10 +88,10 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="..\..\..\Source\DebugEngine.Core.pas"/>
-        <DCCReference Include="..\..\..\Source\DebugEngine.DebugInfo.pas"/>
-        <DCCReference Include="..\..\..\Source\DebugEngine.DebugUtils.pas"/>
-        <DCCReference Include="..\..\..\Source\DebugEngine.PeUtils.pas"/>
+        <DCCReference Include="..\..\..\src\DebugEngine.Core.pas"/>
+        <DCCReference Include="..\..\..\src\DebugEngine.DebugInfo.pas"/>
+        <DCCReference Include="..\..\..\src\DebugEngine.DebugUtils.pas"/>
+        <DCCReference Include="..\..\..\src\DebugEngine.PeUtils.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

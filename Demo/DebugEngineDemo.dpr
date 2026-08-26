@@ -3,15 +3,15 @@ program DebugEngineDemo;
 uses
   Vcl.Forms,
   uMain in 'uMain.pas' {Main},
-  DebugEngine.AsmRegUtils in '..\Source\DebugEngine.AsmRegUtils.pas',
-  DebugEngine.Core in '..\Source\DebugEngine.Core.pas',
-  DebugEngine.DebugInfo in '..\Source\DebugEngine.DebugInfo.pas',
-  DebugEngine.DebugUtils in '..\Source\DebugEngine.DebugUtils.pas',
-  DebugEngine.Disasm in '..\Source\DebugEngine.Disasm.pas',
-  DebugEngine.HookException in '..\Source\DebugEngine.HookException.pas',
-  DebugEngine.Trace in '..\Source\DebugEngine.Trace.pas',
-  DebugEngine.MapParser in '..\Source\DebugEngine.MapParser.pas',
-  DebugEngine.CrashLog in '..\Source\DebugEngine.CrashLog.pas';
+  DebugEngine.AsmRegUtils in '..\src\DebugEngine.AsmRegUtils.pas',
+  DebugEngine.Core in '..\src\DebugEngine.Core.pas',
+  DebugEngine.DebugInfo in '..\src\DebugEngine.DebugInfo.pas',
+  DebugEngine.DebugUtils in '..\src\DebugEngine.DebugUtils.pas',
+  DebugEngine.Disasm in '..\src\DebugEngine.Disasm.pas',
+  DebugEngine.HookException in '..\src\DebugEngine.HookException.pas',
+  DebugEngine.Trace in '..\src\DebugEngine.Trace.pas',
+  DebugEngine.MapParser in '..\src\DebugEngine.MapParser.pas',
+  DebugEngine.CrashLog in '..\src\DebugEngine.CrashLog.pas';
 
 {$R *.res}
 

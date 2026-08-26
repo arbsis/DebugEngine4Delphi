@@ -18,6 +18,9 @@
 /// </summary>
 unit DebugEngine.Linux.Trace;
 
+{$RANGECHECKS OFF}
+{$OVERFLOWCHECKS OFF}
+
 interface
 
 uses

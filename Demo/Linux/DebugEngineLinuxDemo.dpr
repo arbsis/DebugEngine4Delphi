@@ -17,13 +17,13 @@ uses
   System.SysUtils,
   System.Classes,
   System.StrUtils,
-  DebugEngine.Linux.Elf in '..\..\Source\Linux\DebugEngine.Linux.Elf.pas',
-  DebugEngine.Linux.Modules in '..\..\Source\Linux\DebugEngine.Linux.Modules.pas',
-  DebugEngine.Linux.DebugInfo in '..\..\Source\Linux\DebugEngine.Linux.DebugInfo.pas',
-  DebugEngine.Linux.Trace in '..\..\Source\Linux\DebugEngine.Linux.Trace.pas',
-  DebugEngine.Linux.Registers in '..\..\Source\Linux\DebugEngine.Linux.Registers.pas',
-  DebugEngine.Linux.SysInfo in '..\..\Source\Linux\DebugEngine.Linux.SysInfo.pas',
-  DebugEngine.Linux.HookException in '..\..\Source\Linux\DebugEngine.Linux.HookException.pas';
+  DebugEngine.Linux.Elf in '..\..\src\Linux\DebugEngine.Linux.Elf.pas',
+  DebugEngine.Linux.Modules in '..\..\src\Linux\DebugEngine.Linux.Modules.pas',
+  DebugEngine.Linux.DebugInfo in '..\..\src\Linux\DebugEngine.Linux.DebugInfo.pas',
+  DebugEngine.Linux.Trace in '..\..\src\Linux\DebugEngine.Linux.Trace.pas',
+  DebugEngine.Linux.Registers in '..\..\src\Linux\DebugEngine.Linux.Registers.pas',
+  DebugEngine.Linux.SysInfo in '..\..\src\Linux\DebugEngine.Linux.SysInfo.pas',
+  DebugEngine.Linux.HookException in '..\..\src\Linux\DebugEngine.Linux.HookException.pas';
 
 var
   Pass, Fail: Integer;

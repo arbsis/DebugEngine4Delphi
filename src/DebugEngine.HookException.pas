@@ -22,6 +22,9 @@
 
 unit DebugEngine.HookException;
 
+{$RANGECHECKS OFF}
+{$OVERFLOWCHECKS OFF}
+
 interface
 
 uses

@@ -19,6 +19,9 @@
 /// </summary>
 unit DebugEngine.Linux.Modules;
 
+{$RANGECHECKS OFF}
+{$OVERFLOWCHECKS OFF}
+
 interface
 
 uses

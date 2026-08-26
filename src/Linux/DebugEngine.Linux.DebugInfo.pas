@@ -23,6 +23,9 @@
 /// </summary>
 unit DebugEngine.Linux.DebugInfo;
 
+{$RANGECHECKS OFF}
+{$OVERFLOWCHECKS OFF}
+
 interface
 
 uses

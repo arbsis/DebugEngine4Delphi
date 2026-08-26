@@ -34,7 +34,7 @@
         <Base>true</Base>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base)'!=''">
-        <DCC_UnitSearchPath>..\..\Source\Linux;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_UnitSearchPath>..\..\src\Linux;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <SanitizedProjectName>DebugEngineLinuxDemo</SanitizedProjectName>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Android)'!=''">
@@ -57,13 +57,13 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="..\..\Source\Linux\DebugEngine.Linux.Elf.pas"/>
-        <DCCReference Include="..\..\Source\Linux\DebugEngine.Linux.Modules.pas"/>
-        <DCCReference Include="..\..\Source\Linux\DebugEngine.Linux.DebugInfo.pas"/>
-        <DCCReference Include="..\..\Source\Linux\DebugEngine.Linux.Trace.pas"/>
-        <DCCReference Include="..\..\Source\Linux\DebugEngine.Linux.Registers.pas"/>
-        <DCCReference Include="..\..\Source\Linux\DebugEngine.Linux.SysInfo.pas"/>
-        <DCCReference Include="..\..\Source\Linux\DebugEngine.Linux.HookException.pas"/>
+        <DCCReference Include="..\..\src\Linux\DebugEngine.Linux.Elf.pas"/>
+        <DCCReference Include="..\..\src\Linux\DebugEngine.Linux.Modules.pas"/>
+        <DCCReference Include="..\..\src\Linux\DebugEngine.Linux.DebugInfo.pas"/>
+        <DCCReference Include="..\..\src\Linux\DebugEngine.Linux.Trace.pas"/>
+        <DCCReference Include="..\..\src\Linux\DebugEngine.Linux.Registers.pas"/>
+        <DCCReference Include="..\..\src\Linux\DebugEngine.Linux.SysInfo.pas"/>
+        <DCCReference Include="..\..\src\Linux\DebugEngine.Linux.HookException.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

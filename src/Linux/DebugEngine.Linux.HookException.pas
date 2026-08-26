@@ -24,6 +24,9 @@
 /// </summary>
 unit DebugEngine.Linux.HookException;
 
+{$RANGECHECKS OFF}
+{$OVERFLOWCHECKS OFF}
+
 interface
 
 uses

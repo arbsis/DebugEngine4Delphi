@@ -50,10 +50,10 @@ Typical uses:
 
 | Platform | Compiler | Status | Implementation |
 |---|---|---|---|
-| Windows 32-bit | `dcc32` (Delphi 10.2 … **13**) | ✅ Full feature set | `Source/*.pas` |
-| Windows 64-bit | `dcc64` (Delphi 10.2 … **13**) | ✅ Full feature set | `Source/*.pas` |
-| Windows 64-bit "modern" (`Win64x`) | Delphi 13 | ✅ Same as Win64 (shares compiler and RTL in Delphi 13) | `Source/*.pas` |
-| Linux 64-bit | `dcclinux64` (Delphi 13) | ✅ Stack traces, symbols, crash logs, registers, system info | `Source/Linux/*.pas` |
+| Windows 32-bit | `dcc32` (Delphi 10.2 … **13**) | ✅ Full feature set | `src/*.pas` |
+| Windows 64-bit | `dcc64` (Delphi 10.2 … **13**) | ✅ Full feature set | `src/*.pas` |
+| Windows 64-bit "modern" (`Win64x`) | Delphi 13 | ✅ Same as Win64 (shares compiler and RTL in Delphi 13) | `src/*.pas` |
+| Linux 64-bit | `dcclinux64` (Delphi 13) | ✅ Stack traces, symbols, crash logs, registers, system info | `src/Linux/*.pas` |
 | macOS / iOS / Android | — | ❌ Not supported | — |
 
 The Windows implementation relies on inline assembly, the PE format, Delphi map files and the Windows
@@ -66,7 +66,7 @@ Verified with Delphi 13 (Studio 37.0): Win32, Win64, Win64x and Linux64 (Ubuntu 
 
 ## Features
 
-### Windows (`Source/`)
+### Windows (`src/`)
 
 | Area | What you get | Unit |
 |---|---|---|
@@ -78,10 +78,10 @@ Verified with Delphi 13 (Studio 37.0): Win32, Win64, Win64x and Linux64 (Ubuntu 
 | Embedding | `InsertDebugInfo` (SMAP into a `.SDEBUG` section or an RCDATA resource), `RemoveDebugInfo` / `RestoreDebugInfo` (strip/restore Delphi's own `.debug` data) | `DebugEngine.DebugUtils` |
 | Try blocks | `EnumTryBlocks` (x64, from `.pdata`/unwind info), `TraceTryBlocks` (x86, SEH chain) | `DebugEngine.Core`, `DebugEngine.Trace` |
 | Registers | `SnapshotOfLegacyRegisters`, `SnapshotOfFPURegisters`, `SnapshotOfMMXRegisters`, `SnapshotOfVectorRegisters` (XMM/YMM/ZMM), `SnapshotOfRFlagsRegister`, `SnapshotOfMXCSRRegister` with typed helpers | `DebugEngine.AsmRegUtils` |
-| Disassembler | `DisasmAndCommentFunction` (UnivDisasm based), call-target resolution, Delphi string detection | `DebugEngine.Disasm`, `Source/UnivDisasm` |
+| Disassembler | `DisasmAndCommentFunction` (UnivDisasm based), call-target resolution, Delphi string detection | `DebugEngine.Disasm`, `src/UnivDisasm` |
 | PE utils | Headers, sections, `PeFindSection`, module ↔ address helpers | `DebugEngine.PeUtils` |
 
-### Linux (`Source/Linux/`)
+### Linux (`src/Linux/`)
 
 | Area | What you get | Unit |
 |---|---|---|
@@ -100,9 +100,9 @@ Verified with Delphi 13 (Studio 37.0): Win32, Win64, Win64x and Linux64 (Ubuntu 
 ## Repository layout
 
 ```
-Source/                    Windows units (DebugEngine.*.pas) + platform independent DebugEngine.MapParser.pas
-Source/Linux/              Linux units (DebugEngine.Linux.*.pas)
-Source/UnivDisasm/         x86/x64 disassembler used by DebugEngine.Disasm (Windows)
+src/                       Windows units (DebugEngine.*.pas) + platform independent DebugEngine.MapParser.pas
+src/Linux/                 Linux units (DebugEngine.Linux.*.pas)
+src/UnivDisasm/            x86/x64 disassembler used by DebugEngine.Disasm (Windows)
 Demo/                      VCL demo (Windows) - DebugEngineDemo.dproj
 Demo/Simple/               Minimal Windows example (one exception -> madExcept-like log) - DebugEngineSimple.dproj
 Demo/Linux/                Console demo / smoke test (Linux) - DebugEngineLinuxDemo.dproj
@@ -118,8 +118,8 @@ Script/                    Perl generators for the RFLAGS / MXCSR helpers
 
 There is no package to install: add the source folders to your project's search path.
 
-- **Windows**: `Source` and `Source\UnivDisasm`.
-- **Linux**: `Source\Linux` (and `Source` if you want `DebugEngine.MapParser`).
+- **Windows**: `src` and `src\UnivDisasm`.
+- **Linux**: `src\Linux` (and `src` if you want `DebugEngine.MapParser`).
 
 Project options that matter:
 

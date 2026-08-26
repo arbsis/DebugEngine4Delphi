@@ -50,10 +50,10 @@ Usos típicos:
 
 | Plataforma | Compilador | Status | Implementação |
 |---|---|---|---|
-| Windows 32 bits | `dcc32` (Delphi 10.2 … **13**) | ✅ Conjunto completo de recursos | `Source/*.pas` |
-| Windows 64 bits | `dcc64` (Delphi 10.2 … **13**) | ✅ Conjunto completo de recursos | `Source/*.pas` |
-| Windows 64 bits "modern" (`Win64x`) | Delphi 13 | ✅ Igual ao Win64 (compartilha compilador e RTL no Delphi 13) | `Source/*.pas` |
-| Linux 64 bits | `dcclinux64` (Delphi 13) | ✅ Stack traces, símbolos, logs de crash, registradores, info do sistema | `Source/Linux/*.pas` |
+| Windows 32 bits | `dcc32` (Delphi 10.2 … **13**) | ✅ Conjunto completo de recursos | `src/*.pas` |
+| Windows 64 bits | `dcc64` (Delphi 10.2 … **13**) | ✅ Conjunto completo de recursos | `src/*.pas` |
+| Windows 64 bits "modern" (`Win64x`) | Delphi 13 | ✅ Igual ao Win64 (compartilha compilador e RTL no Delphi 13) | `src/*.pas` |
+| Linux 64 bits | `dcclinux64` (Delphi 13) | ✅ Stack traces, símbolos, logs de crash, registradores, info do sistema | `src/Linux/*.pas` |
 | macOS / iOS / Android | — | ❌ Não suportado | — |
 
 A implementação Windows depende de assembly inline, do formato PE, dos arquivos map do Delphi e do modelo de
@@ -66,7 +66,7 @@ Verificado com Delphi 13 (Studio 37.0): Win32, Win64, Win64x e Linux64 (Ubuntu 2
 
 ## Funcionalidades
 
-### Windows (`Source/`)
+### Windows (`src/`)
 
 | Área | O que você obtém | Unit |
 |---|---|---|
@@ -78,10 +78,10 @@ Verificado com Delphi 13 (Studio 37.0): Win32, Win64, Win64x e Linux64 (Ubuntu 2
 | Embutir | `InsertDebugInfo` (SMAP numa seção `.SDEBUG` ou num recurso RCDATA), `RemoveDebugInfo` / `RestoreDebugInfo` (remove/restaura os dados `.debug` do próprio Delphi) | `DebugEngine.DebugUtils` |
 | Blocos try | `EnumTryBlocks` (x64, a partir de `.pdata`/unwind info), `TraceTryBlocks` (x86, cadeia SEH) | `DebugEngine.Core`, `DebugEngine.Trace` |
 | Registradores | `SnapshotOfLegacyRegisters`, `SnapshotOfFPURegisters`, `SnapshotOfMMXRegisters`, `SnapshotOfVectorRegisters` (XMM/YMM/ZMM), `SnapshotOfRFlagsRegister`, `SnapshotOfMXCSRRegister` com helpers tipados | `DebugEngine.AsmRegUtils` |
-| Desmontador | `DisasmAndCommentFunction` (baseado no UnivDisasm), resolução de alvo de chamadas, detecção de strings Delphi | `DebugEngine.Disasm`, `Source/UnivDisasm` |
+| Desmontador | `DisasmAndCommentFunction` (baseado no UnivDisasm), resolução de alvo de chamadas, detecção de strings Delphi | `DebugEngine.Disasm`, `src/UnivDisasm` |
 | Utilitários PE | Cabeçalhos, seções, `PeFindSection`, helpers módulo ↔ endereço | `DebugEngine.PeUtils` |
 
-### Linux (`Source/Linux/`)
+### Linux (`src/Linux/`)
 
 | Área | O que você obtém | Unit |
 |---|---|---|
@@ -100,9 +100,9 @@ Verificado com Delphi 13 (Studio 37.0): Win32, Win64, Win64x e Linux64 (Ubuntu 2
 ## Estrutura do repositório
 
 ```
-Source/                    Units Windows (DebugEngine.*.pas) + DebugEngine.MapParser.pas (independente de plataforma)
-Source/Linux/              Units Linux (DebugEngine.Linux.*.pas)
-Source/UnivDisasm/         Desmontador x86/x64 usado por DebugEngine.Disasm (Windows)
+src/                       Units Windows (DebugEngine.*.pas) + DebugEngine.MapParser.pas (independente de plataforma)
+src/Linux/                 Units Linux (DebugEngine.Linux.*.pas)
+src/UnivDisasm/            Desmontador x86/x64 usado por DebugEngine.Disasm (Windows)
 Demo/                      Demo VCL (Windows) - DebugEngineDemo.dproj
 Demo/Simple/               Exemplo mínimo Windows (uma exceção -> log estilo madExcept) - DebugEngineSimple.dproj
 Demo/Linux/                Demo/teste de console (Linux) - DebugEngineLinuxDemo.dproj
@@ -118,8 +118,8 @@ Script/                    Geradores Perl dos helpers de RFLAGS / MXCSR
 
 Não há pacote para instalar: adicione as pastas de código-fonte ao search path do seu projeto.
 
-- **Windows**: `Source` e `Source\UnivDisasm`.
-- **Linux**: `Source\Linux` (e `Source` se quiser `DebugEngine.MapParser`).
+- **Windows**: `src` e `src\UnivDisasm`.
+- **Linux**: `src\Linux` (e `src` se quiser `DebugEngine.MapParser`).
 
 Opções de projeto que importam:
 

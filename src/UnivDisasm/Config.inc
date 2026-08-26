@@ -18,3 +18,9 @@
 { .$DEFINE NEED_VFORM } 
 
 {$ENDIF UNIVDISASM_CONFIG}
+
+// DebugEngine faz aritmetica de ponteiro e de inteiros sem sinal em toda parte:
+// com range/overflow checking do projeto (config Debug) o carregador do map
+// estoura e cai silenciosamente para a tabela de exports. Desligados aqui.
+{$RANGECHECKS OFF}
+{$OVERFLOWCHECKS OFF}

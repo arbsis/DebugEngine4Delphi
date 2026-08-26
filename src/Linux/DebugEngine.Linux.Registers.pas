@@ -19,6 +19,9 @@
 /// </summary>
 unit DebugEngine.Linux.Registers;
 
+{$RANGECHECKS OFF}
+{$OVERFLOWCHECKS OFF}
+
 interface
 
 uses

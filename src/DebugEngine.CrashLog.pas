@@ -24,6 +24,9 @@
 /// </summary>
 unit DebugEngine.CrashLog;
 
+{$RANGECHECKS OFF}
+{$OVERFLOWCHECKS OFF}
+
 interface
 
 uses

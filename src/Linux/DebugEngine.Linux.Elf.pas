@@ -21,6 +21,9 @@
 /// </summary>
 unit DebugEngine.Linux.Elf;
 
+{$RANGECHECKS OFF}
+{$OVERFLOWCHECKS OFF}
+
 interface
 
 uses

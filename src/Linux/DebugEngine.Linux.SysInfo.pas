@@ -19,6 +19,9 @@
 /// </summary>
 unit DebugEngine.Linux.SysInfo;
 
+{$RANGECHECKS OFF}
+{$OVERFLOWCHECKS OFF}
+
 interface
 
 uses

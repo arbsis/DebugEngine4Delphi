@@ -13,7 +13,7 @@
     <PropertyGroup Condition="'$(Base)'!=''">
         <DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
         <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
-        <DCC_UnitSearchPath>..\..\Source;..\..\Source\UnivDisasm;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_UnitSearchPath>..\..\src;..\..\src\UnivDisasm;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <DCC_MapFile>3</DCC_MapFile>
         <DCC_DebugInformation>2</DCC_DebugInformation>
         <DCC_LocalDebugSymbols>true</DCC_LocalDebugSymbols>

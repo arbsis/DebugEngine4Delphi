@@ -16,8 +16,8 @@ program DebugEngineSimple;
 uses
   System.SysUtils,
   System.Classes,
-  DebugEngine.HookException in '..\..\Source\DebugEngine.HookException.pas',
-  DebugEngine.CrashLog in '..\..\Source\DebugEngine.CrashLog.pas';
+  DebugEngine.HookException in '..\..\src\DebugEngine.HookException.pas',
+  DebugEngine.CrashLog in '..\..\src\DebugEngine.CrashLog.pas';
 
 { Some call depth so that the stack trace has something to show. }
 

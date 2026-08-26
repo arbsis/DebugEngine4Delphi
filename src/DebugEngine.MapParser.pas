@@ -28,6 +28,9 @@
 
 unit DebugEngine.MapParser;
 
+{$RANGECHECKS OFF}
+{$OVERFLOWCHECKS OFF}
+
 interface
 
 uses

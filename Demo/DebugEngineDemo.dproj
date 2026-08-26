@@ -66,7 +66,7 @@
         <SanitizedProjectName>DebugEngineDemo</SanitizedProjectName>
         <Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
         <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
-        <DCC_UnitSearchPath>..\Source;..\Source\UnivDisasm;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_UnitSearchPath>..\src;..\src\UnivDisasm;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
         <DCC_E>false</DCC_E>
         <DCC_N>false</DCC_N>
@@ -142,15 +142,15 @@ $(PostBuildEvent)]]></PostBuildEvent>
             <Form>Main</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="..\Source\DebugEngine.AsmRegUtils.pas"/>
-        <DCCReference Include="..\Source\DebugEngine.Core.pas"/>
-        <DCCReference Include="..\Source\DebugEngine.DebugInfo.pas"/>
-        <DCCReference Include="..\Source\DebugEngine.DebugUtils.pas"/>
-        <DCCReference Include="..\Source\DebugEngine.Disasm.pas"/>
-        <DCCReference Include="..\Source\DebugEngine.HookException.pas"/>
-        <DCCReference Include="..\Source\DebugEngine.Trace.pas"/>
-        <DCCReference Include="..\Source\DebugEngine.MapParser.pas"/>
-        <DCCReference Include="..\Source\DebugEngine.CrashLog.pas"/>
+        <DCCReference Include="..\src\DebugEngine.AsmRegUtils.pas"/>
+        <DCCReference Include="..\src\DebugEngine.Core.pas"/>
+        <DCCReference Include="..\src\DebugEngine.DebugInfo.pas"/>
+        <DCCReference Include="..\src\DebugEngine.DebugUtils.pas"/>
+        <DCCReference Include="..\src\DebugEngine.Disasm.pas"/>
+        <DCCReference Include="..\src\DebugEngine.HookException.pas"/>
+        <DCCReference Include="..\src\DebugEngine.Trace.pas"/>
+        <DCCReference Include="..\src\DebugEngine.MapParser.pas"/>
+        <DCCReference Include="..\src\DebugEngine.CrashLog.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

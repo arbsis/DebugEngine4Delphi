@@ -26,11 +26,11 @@ program DD;
 
 uses
   System.SysUtils,
-  DebugEngine.MapParser in '..\..\..\Source\DebugEngine.MapParser.pas',
-  DebugEngine.Core in '..\..\..\Source\DebugEngine.Core.pas',
-  DebugEngine.DebugInfo in '..\..\..\Source\DebugEngine.DebugInfo.pas',
-  DebugEngine.DebugUtils in '..\..\..\Source\DebugEngine.DebugUtils.pas',
-  DebugEngine.PeUtils in '..\..\..\Source\DebugEngine.PeUtils.pas';
+  DebugEngine.MapParser in '..\..\..\src\DebugEngine.MapParser.pas',
+  DebugEngine.Core in '..\..\..\src\DebugEngine.Core.pas',
+  DebugEngine.DebugInfo in '..\..\..\src\DebugEngine.DebugInfo.pas',
+  DebugEngine.DebugUtils in '..\..\..\src\DebugEngine.DebugUtils.pas',
+  DebugEngine.PeUtils in '..\..\..\src\DebugEngine.PeUtils.pas';
 
 procedure DoHelp;
 begin

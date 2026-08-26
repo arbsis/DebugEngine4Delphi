@@ -20,6 +20,9 @@
 /// </summary>
 unit DebugEngine.Linux.Posix;
 
+{$RANGECHECKS OFF}
+{$OVERFLOWCHECKS OFF}
+
 interface
 
 {$IFNDEF LINUX}
